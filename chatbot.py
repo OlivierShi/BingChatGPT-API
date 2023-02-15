@@ -27,7 +27,6 @@ class Chatbot:
         hub_request.update(prompt=prompt, conversationId=conversationId, invocationId=invocationId)
         async for final, response in self.chat_hub.ask_stream(hub_request):
             if final:
-                print(response)
                 return response
 
     # async def ask_stream(self, prompt: str, conversationId: str) -> str:

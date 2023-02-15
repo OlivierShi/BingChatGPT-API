@@ -89,7 +89,7 @@ async def chatgpt_reply():
         invocationId=invocationId)
     conversation_id = response["item"]["conversationId"]
     conversation_message = response["item"]["messages"][1]["adaptiveCards"][0]["body"][0]["text"]
-    logging.info("ConversationId: {conversation_id}\nInvocationId: {invocationId}\nPrompt: {prompt}\nMessage: {conversation_message}")
+    logging.info(f"ConversationId: {conversation_id}\nInvocationId: {invocationId}\nPrompt: {prompt}\nMessage: {conversation_message}")
     return {"conversationId": conversation_id, "message": conversation_message, "invocationId": invocationId+1}
 
 app.run(debug=True, host="0.0.0.0")
