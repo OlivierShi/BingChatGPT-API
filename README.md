@@ -119,3 +119,7 @@ POST {host}/chatgpt
 - message: is from Bing-ChatGPT
 - conversationId: to identify a conversation session, is same with request conversationId
 - invocationId: is one plus the request invocationId
+
+
+# Reference 
+https://github.com/acheong08/EdgeGPT
