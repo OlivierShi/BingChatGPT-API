@@ -7,6 +7,39 @@
 ## How to get cookies_U
 Inspect -> Application -> Cookies -> Search "_U"
 
+## API usage
+1. call `POST {host}/create_conversation` with the body `{"userId": "OlivierShi"}`
+
+It will return below information.
+```python
+ {
+    "conversationId": ,
+    "clientId": ,
+    "conversationSignature": ,
+    "invocationId": 
+}
+```
+
+![image](https://user-images.githubusercontent.com/24621410/219033215-ef3cb61f-b909-4d8c-98bb-b0794d2e7eb3.png)
+2. call `POST {host}/chatgpt` with the below body,
+```python
+{
+  "prompt": "I love Three-Body.",
+  "clientId": "",
+  "conversationId": "",
+  "conversationSignature": "",
+  "invocationId": 0
+}
+```
+where `clientId`, `conversationId`, `conversationSignature` and `invocationId` is the response from `create_conversation` API.
+
+![image](https://user-images.githubusercontent.com/24621410/219032570-34f7d78b-6bf5-45a1-8262-b92c2c8c6f47.png)
+
+
+## What is amazing
+We can create multiple conversation sessions at the same time using **a single Bing account** with API `POST {host}/create_conversation`. In addition, those active sessions will not influence each other and multiple conversation can be processed independently within **a single Bing account**. 
+
+
 ## bing API contracts
 
 1. response body of https://www.bing.com/turing/conversation/create
