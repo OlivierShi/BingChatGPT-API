@@ -5,7 +5,9 @@
 `python api.py <cookies_U>`
 
 ## How to get cookies_U
-Inspect -> Application -> Cookies -> Search "_U"
+1. You should be in the whitelist of Bing/new
+2. Log in Bing/new and search one time in BingChatGPT
+3. Inspect -> Application -> Cookies -> Search "_U"
 
 ## API usage
 1. call `POST {host}/create_conversation` with the body `{"userId": "OlivierShi"}`
