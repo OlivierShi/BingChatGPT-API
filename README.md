@@ -12,6 +12,8 @@
 ## API usage
 1. call `POST {host}/create_conversation` with the body `{"userId": "OlivierShi"}`
 
+The passed `userId` is a new-created concept in this PR, which is not the user account of Bing/new. This `userId` should be in the `whitelist.txt` and I write this simple logic to avoid too many uncontrollable requests.
+
 It will return below information.
 ```python
  {
