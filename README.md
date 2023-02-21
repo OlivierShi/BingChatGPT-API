@@ -9,6 +9,10 @@
 2. Log in Bing/new and search one time in BingChatGPT
 3. Inspect -> Application -> Cookies -> Search "_U"
 
+## Attention
+
+Do not create conversation frequently. It might remove your account from Bing/new whitelist. :( 
+
 ## API usage
 1. call `POST {host}/create_conversation` with the body `{"userId": "OlivierShi"}`
 
